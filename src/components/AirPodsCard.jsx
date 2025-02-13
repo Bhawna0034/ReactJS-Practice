@@ -19,7 +19,7 @@ export function AirPods() {
             With plenty of talk and listen time, voice-activated Siri access,
             and an available wireless charging case.
           </p>
-          <button className="bg-gray-200 w-full">ADD TO CART</button>
+          <button className="bg-gray-200 w-full hover:scale-[1.02] focus:scale-[1.02] active:scale-100 border-none outline-none focus:border-none focus:outline-none">ADD TO CART</button>
         </div>
       </div>
     </div>
