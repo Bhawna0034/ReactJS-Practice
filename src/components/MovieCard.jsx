@@ -8,6 +8,8 @@ export function MovieCard() {
     const description = " A group of elderly people are giving interviews about having livedin a climate of crop blight and constant dust reminiscent of The Great Depression of the 1930's. The first one seen is an elderly woman stating her father was a farmer, but did not start out that way."
     const cast = "Matthew McConaughey, Anne Hathaway, Jessica Chastain";
 
+    let age = 22;
+
     return (
     <>
     <div className="bg-black flex flex-col items-center justify-center py-24">
@@ -41,8 +43,8 @@ export function MovieCard() {
           <p className="text-sm text-gray-300 italic mb-10"> {cast}</p>
           <div className="flex items-center justify-between">
             <button className="bg-transparent border border-red-600 text-lg text-red-600 flex items-center justify-between px-2 py-1 outline-none hover:outline-none">
-              <CgPlayButton />
-              <span className="font-normal">WATCH TRAILER</span>
+              <CgPlayButton className="text-3xl" />
+              <span className="uppercase font-normal">{age>=18? "Watch Now" : "Not Available"}</span>
             </button>
             <div className="flex gap-4 items-center">
               <img
