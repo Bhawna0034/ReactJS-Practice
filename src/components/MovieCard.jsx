@@ -3,7 +3,7 @@ import { CgPlayButton } from "react-icons/cg";
 import { FaBookmark } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
 import moviesData from "../api/moviesData.json";
-// import { FaPlay } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 
 export function InterstellarCard() {
   const title = "Interstellar";
@@ -70,6 +70,32 @@ export function InterstellarCard() {
         </div>
       </div>
     </>
+  );
+}
+
+export function MovieCard(props){
+  console.log(props);
+  return (
+    <li>
+      <div>
+        <img src={props.currentMovie.img_url} 
+             alt={props.currentMovie.img_alt}
+             width="40%"
+        />
+        <div>
+          <h1>{props.currentMovie.title}</h1>
+          <p>
+            {props.currentMovie.year}/ {props.currentMovie.genre}
+          </p>
+          <p>{props.currentMovie.cast}</p>
+          <p>{props.currentMovie.description}</p>
+          <button>
+            <FaPlay />
+            <span>Watch Trailer</span>
+          </button>
+        </div>
+      </div>
+    </li>
   );
 }
 
