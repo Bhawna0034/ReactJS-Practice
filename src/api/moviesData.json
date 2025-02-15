@@ -1,0 +1,55 @@
+[
+    {
+        "title": "Pushpa: The Rule - Part 2",
+        "id": "pushpa",
+        "img_url": "Images/Pushpa2.jpg",
+        "year": "2024" ,
+        "genre": ["Action ", "Thriller "],
+        "cast": ["Allu Arjun ", "Rashmika Mandanna ", "Fahadh Faasil"],
+        "description": "As his smuggling empire grows, a brazen Pushpa longs for power and respect on his vengeful journey, while facing old rivals and new.",
+        "watch_url": "https://youtu.be/1kVK0MZlbI4?si=TlkqQqP7nF2uoxlk"
+    },
+    {
+        "title": "Emergency",
+        "id": "emergency",
+        "img_url": "Images/Emergency.jpg",
+        "year": "2025" ,
+        "genre": ["Drama ", "Historical "],
+        "cast": ["Kangana Ranaut ", "Anupam Kheer "],
+        "description": "A chronicle of the incidents that took place under the leadership of Mrs. Indira Gandhi, one of the most powerful women in Indian history.",
+        "watch_url": "https://youtu.be/GB-9NdjTFvM?si=QzCFk7Rb6Mra1hmx"
+    },
+    {
+        "title": "Chhaava",
+        "id": "pushpa",
+        "img_url": "Images/Chhaava.jpg",
+        "year": "2025" ,
+        "genre": ["Action ", "Drama ", "History "],
+        "cast": ["Vicky Kaushal ", "Akshaye Khanna ", "Fahadh Faasil "],
+        "description": "A historical drama based on the life of Chhatrapati Sambhaji Maharaj, the son of Chhatrapati Shivaji Maharaj.",
+        "watch_url": "https://youtu.be/77vRyWNqZjM?si=armOV97egyIRRmDV"
+    },
+    {
+        "title": "Deva",
+        "id": "deva",
+        "img_url": "Images/Deva.jpg",
+        "year": "2025" ,
+        "genre": ["Action ", "Thriller "],
+        "cast": ["Pooja Hegde ", "Shahid Kapoor ", "Kubbra Sait "],
+        "description": "A brilliant yet rebellious police officer uncovers a web of deceit and betrayal while investigating a high-profile case.",
+        "watch_url": "https://youtu.be/3x77q40hATw?si=ysnxqCThnqu7ESxh"
+    },
+    {
+        "title": "Bhool Bhulaiyaa 3",
+        "id": "bhoolBhulaiyaa",
+        "img_url": "Images/Bhool Bhulaiya.jpg",
+        "img_alt": "BhoolBhulaiyaa",
+        "year": "2024" ,
+        "genre": ["Supernatural Horror ", "Comedy ", "Fantasy ", "Horror "],
+        "cast": ["Kartik Aaryan ", "Vidya Balan ", "Madhuri Dixit "],
+        "description": "Ruhaan, a frauster posting as an exorcist, takes on a lucrative case at a haunted castle, unraveling a sinister plot involving mischievous priests, culminating in a hilarious yet thrilling ride filled with unexpected twists and scares.",
+        "watch_url": "https://youtu.be/6YMY62tMLUA?si=CyqcWC0IoRYyKuPI"
+
+    }
+   
+]

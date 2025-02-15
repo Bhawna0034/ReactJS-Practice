@@ -1,18 +1,14 @@
 import { useState } from 'react'
-import './components/button'; 
-import {MovieCard} from './components/MovieCard'
-
-
-
+import { InterstellarCard} from './components/MovieCard'
+import { MovieCards } from './components/MovieCards'
 
 // import './App.css'
-// import MyButton from './components/button';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-   <MovieCard/> 
+    <MovieCards />
   )
 }
 
