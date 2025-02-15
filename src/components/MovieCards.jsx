@@ -6,7 +6,7 @@ export function MovieCards() {
   return (
     <ul>
       {moviesData.map((currentMovie) => {
-        return <MovieCard key={currentMovie.id} currentMovie = {currentMovie}/>
+        return <MovieCard key={currentMovie.id} data = {currentMovie}/>
       })}
     </ul>
   );

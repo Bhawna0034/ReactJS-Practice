@@ -75,20 +75,23 @@ export function InterstellarCard() {
 
 export function MovieCard(props){
   console.log(props);
+
+  const {id, img_url, img_alt, title, year, genre, cast, description, watch_url} = props.data;
+
   return (
     <li>
       <div>
-        <img src={props.currentMovie.img_url} 
-             alt={props.currentMovie.img_alt}
+        <img src={img_url} 
+             alt={img_alt}
              width="40%"
         />
         <div>
-          <h1>{props.currentMovie.title}</h1>
+          <h1>{title}</h1>
           <p>
-            {props.currentMovie.year}/ {props.currentMovie.genre}
+            {year}/ {genre}
           </p>
-          <p>{props.currentMovie.cast}</p>
-          <p>{props.currentMovie.description}</p>
+          <p>{cast}</p>
+          <p>{description}</p>
           <button>
             <FaPlay />
             <span>Watch Trailer</span>
