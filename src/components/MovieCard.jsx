@@ -92,10 +92,12 @@ export function MovieCard(props){
           </p>
           <p>{cast}</p>
           <p>{description}</p>
-          <button>
-            <FaPlay />
-            <span>Watch Trailer</span>
-          </button>
+          <a href= {watch_url} target="_blank" >
+            <button>
+               <FaPlay />
+               <span>Watch Trailer</span>
+            </button>
+          </a>
         </div>
       </div>
     </li>
