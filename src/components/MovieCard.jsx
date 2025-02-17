@@ -73,29 +73,29 @@ export function InterstellarCard() {
   );
 }
 
-export function MovieCard(props){
+export function MovieCard(props) {
   console.log(props);
 
-  const {id, img_url, img_alt, title, year, genre, cast, description, watch_url} = props.data;
+  const { img_url, img_alt, title, year, genre, cast, description, watch_url } =
+    props.data;
 
   return (
-    <li>
-      <div>
-        <img src={img_url} 
-             alt={img_alt}
-             width="40%"
-        />
+    <li className="max-w-[500px] h-full" style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
+      <div className="flex flex-col flex-grow">
         <div>
-          <h1>{title}</h1>
-          <p>
-            {year}/ {genre}
+          <img src={img_url} alt={img_alt} className="w-full h-[500px] object-cover" />
+        </div>
+        <div className="bg-black p-4 space-y-2 w-full h-full flex flex-col justify-between">
+          <h1 className="text-4xl text-white font-bold truncate ">{title}</h1>
+          <p className="truncate text-lg text-gray-400">
+            {year} / {genre}
           </p>
-          <p>{cast}</p>
-          <p>{description}</p>
-          <a href= {watch_url} target="_blank" >
-            <button>
-               <FaPlay />
-               <span>Watch Trailer</span>
+          <p className="text-md text-gray-300 truncate">Cast: {cast}</p>
+          <p className="line-clamp-3 text-sm text-gray-400 mb-16">{description}</p>
+          <a href={watch_url} target="_blank" className="mt-auto">
+            <button className="flex gap-2 items-center border-2 border-yellow-400 text-yellow-400 px-4 py-2 rounded-lg hover:scale-[1.02] focus: scale-[1.02]">
+              <FaPlay />
+              <span>Watch Trailer</span>
             </button>
           </a>
         </div>
@@ -103,5 +103,3 @@ export function MovieCard(props){
     </li>
   );
 }
-
-
