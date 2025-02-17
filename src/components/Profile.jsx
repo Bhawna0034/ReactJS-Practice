@@ -12,13 +12,13 @@
 
 // }
 
-function ProfileCard({ name, age, designation, children }) {
+function ProfileCard({ name, age, designation, greetingMessage}) {
   return (
     <div>
       <h1>Name: {name}</h1>
       <p>Age: {age}</p>
       <p>Designation: {designation}</p>
-      <p>{children}</p>
+      <p>{greetingMessage()}</p>
     </div>
   );
 }
@@ -26,8 +26,9 @@ function ProfileCard({ name, age, designation, children }) {
 export default function Profile() {
   return (
     <div>
-      <ProfileCard name="Bhawna" age={22} designation="Frontend Developer">
-        <em>Welcome to React👋</em>
+      <ProfileCard name="Bhawna" age={22} designation="Frontend Developer"
+       greetingMessage = {() => <em>Welcome to React👋</em>}>
+       
       </ProfileCard>
     </div>
   );
