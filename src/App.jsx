@@ -5,7 +5,7 @@ import ConditionalStylingUsingTernaryOperator, {
   ConditinalStylingUsingANDOperator,
   ConditionalStylingUsingJSObject,
 } from "./components/ConditinalStyling";
-import MyButton from "./components/button";
+import MyButton, { Button } from "./components/Button"
 
 // import './App.css'
 
@@ -17,9 +17,12 @@ function App() {
     //   <h1 className="whitespace-nowrap text-3xl font-bold mb-8">List of Best Movies of 2024-2025</h1>
     //   <MovieCards />
     // </section>
-    // <>
-    <MyButton/>
-    // </>
+    <>
+    {/* <MyButton/> */}
+    {/* <Button isPrimary={true} /> */}
+    <Button isPrimary={false} />
+
+   </>
   );
 }
 

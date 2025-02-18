@@ -5,3 +5,9 @@ export default function MyButton(){
     );
 }
 
+
+export function Button({isPrimary}){
+    return(
+        <button className={isPrimary ? styles.primary : styles.secondary}>Click here!</button>
+    )
+}
