@@ -5,6 +5,7 @@ import ConditionalStylingUsingTernaryOperator, {
   ConditinalStylingUsingANDOperator,
   ConditionalStylingUsingJSObject,
 } from "./components/ConditinalStyling";
+import MyButton from "./components/button";
 
 // import './App.css'
 
@@ -16,11 +17,9 @@ function App() {
     //   <h1 className="whitespace-nowrap text-3xl font-bold mb-8">List of Best Movies of 2024-2025</h1>
     //   <MovieCards />
     // </section>
-    <>
-      <ConditionalStylingUsingTernaryOperator />
-      <ConditionalStylingUsingJSObject />
-      <ConditinalStylingUsingANDOperator/>
-    </>
+    // <>
+    <MyButton/>
+    // </>
   );
 }
 

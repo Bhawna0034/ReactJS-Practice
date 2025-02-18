@@ -1,6 +1,7 @@
+import styles from "./Button.module.css"
 export default function MyButton(){
     return(
-       <button className="bg-teal-400 font-bold">Click Me!</button>
+       <button className={styles.button}>Click Me!</button>
     );
 }
 
