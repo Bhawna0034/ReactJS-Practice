@@ -2,7 +2,7 @@ const ConditionalStylingUsingTernaryOperator = () => {
     let isActive = false;
     
     return(
-        <h2 style={{color: isActive ? "green" : "red", marginBottom: "20", padding: 24}}>Conditional Styling using Ternary Operator</h2>
+        <h2 style={{color: isActive ? "green" : "red", marginBottom: 20, padding: 24}}>Conditional Styling using Ternary Operator</h2>
     );
 }
 
@@ -24,4 +24,9 @@ export const ConditionalStylingUsingJSObject = () => {
 
     return <div style={isDarkMode ? darkStyle: lightStyle}>Conditional Styling Using JS Object</div>
 
+}
+
+export const ConditinalStylingUsingANDOperator = () => {
+    const isBold = true;
+    return <h2 style={{fontWeight: isBold && "bold"}}>Conditional Styling using && Operator</h2>
 }
