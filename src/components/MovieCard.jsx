@@ -88,9 +88,9 @@ export function MovieCard(props) {
         <div className="bg-black p-4 space-y-2 w-full h-full flex flex-col justify-between">
           <h1 className="text-4xl text-white font-bold truncate ">{title}</h1>
           <p className="truncate text-lg text-gray-400">
-            {year} / {genre}
+            {year} / {genre.join(", ")}
           </p>
-          <p className="text-md text-gray-300 truncate">Cast: {cast}</p>
+          <p className="text-md text-gray-300 truncate">Cast: {cast.join(", ")}</p>
           <p className="line-clamp-3 text-sm text-gray-400 mb-16">{description}</p>
           <a href={watch_url} target="_blank" className="mt-auto">
             <button className="flex gap-2 items-center border-2 border-yellow-400 text-yellow-400 px-4 py-2 rounded-lg hover:scale-[1.02] focus: scale-[1.02]">
