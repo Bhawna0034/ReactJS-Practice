@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MovieCards } from "./components/MovieCards";
 import InlineCSSComponent from "./components/InlineCSSComponent";
-import ConditionalStylingUsingTernaryOperator from "./components/ConditinalStyling";
+import ConditionalStylingUsingTernaryOperator, { ConditionalStylingUsingJSObject } from "./components/ConditinalStyling";
 
 // import './App.css'
 
@@ -14,7 +14,8 @@ function App() {
     //   <h1 className="whitespace-nowrap text-3xl font-bold mb-8">List of Best Movies of 2024-2025</h1>
     //   <MovieCards />
     // </section>
-   <ConditionalStylingUsingTernaryOperator />
+  //  <ConditionalStylingUsingTernaryOperator />
+  <ConditionalStylingUsingJSObject />
   );
 }
 
