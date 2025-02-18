@@ -5,7 +5,7 @@ import ConditionalStylingUsingTernaryOperator, {
   ConditinalStylingUsingANDOperator,
   ConditionalStylingUsingJSObject,
 } from "./components/ConditinalStyling";
-import MyButton, { Button } from "./components/Button"
+import MyButton, { Button } from './components/Button';
 
 // import './App.css'
 
