@@ -6,6 +6,7 @@ import ConditionalStylingUsingTernaryOperator, {
   ConditionalStylingUsingJSObject,
 } from "./components/ConditinalStyling";
 import MyButton, { Button } from './components/Button';
+import { EventHandling } from "./components/EventHandling";
 
 // import './App.css'
 
@@ -18,9 +19,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <>
-    {/* <MyButton/> */}
-    {/* <Button isPrimary={true} /> */}
-    <Button isPrimary={false} />
+    <EventHandling/>
 
    </>
   );
