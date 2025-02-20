@@ -9,6 +9,7 @@ import MyButton, { Button } from './components/Button';
 import { EventHandling } from "./components/EventHandling";
 import EventProps, { ParentComponent } from "./components/EventProps";
 import { EventPropagation } from "./components/EventPropagation";
+import SimpleCounter from "./components/hooks/SimpleCounter";
 
 // import './App.css'
 
@@ -20,13 +21,9 @@ function App() {
     //   <h1 className="whitespace-nowrap text-3xl font-bold mb-8">List of Best Movies of 2024-2025</h1>
     //   <MovieCards />
     // </section>
-    <>
-    {/* <EventHandling/> */}
-    {/* <ParentComponent/> */}
-    {/* <EventProps/> */}
-    <EventPropagation />
-
-   </>
+    <section className="">
+      <SimpleCounter/>
+    </section>
   );
 }
 
