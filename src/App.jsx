@@ -8,6 +8,7 @@ import ConditionalStylingUsingTernaryOperator, {
 import MyButton, { Button } from './components/Button';
 import { EventHandling } from "./components/EventHandling";
 import EventProps, { ParentComponent } from "./components/EventProps";
+import { EventPropagation } from "./components/EventPropagation";
 
 // import './App.css'
 
@@ -22,7 +23,8 @@ function App() {
     <>
     {/* <EventHandling/> */}
     {/* <ParentComponent/> */}
-    <EventProps/>
+    {/* <EventProps/> */}
+    <EventPropagation />
 
    </>
   );
