@@ -7,6 +7,7 @@ import ConditionalStylingUsingTernaryOperator, {
 } from "./components/ConditinalStyling";
 import MyButton, { Button } from './components/Button';
 import { EventHandling } from "./components/EventHandling";
+import EventProps, { ParentComponent } from "./components/EventProps";
 
 // import './App.css'
 
@@ -19,7 +20,9 @@ function App() {
     //   <MovieCards />
     // </section>
     <>
-    <EventHandling/>
+    {/* <EventHandling/> */}
+    {/* <ParentComponent/> */}
+    <EventProps/>
 
    </>
   );

@@ -25,4 +25,4 @@ export const EventHandling = () => {
         <button onClick={() => welcome('Bhawna')} className="border-2 border-black bg-pink-500 px-4 py-2 font-bold">Login</button>
         </div>
     )
-}
+} 
