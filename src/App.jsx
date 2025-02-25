@@ -10,7 +10,7 @@ import { EventHandling } from "./components/EventHandling";
 import EventProps, { ParentComponent } from "./components/EventProps";
 import { EventPropagation } from "./components/EventPropagation";
 import SimpleCounter from "./components/hooks/SimpleCounter";
-import { DerivedState } from "./components/hooks/DerivedState";
+import { DerivedState, UserProfile } from "./components/hooks/DerivedState";
 
 // import './App.css'
 
@@ -24,7 +24,8 @@ function App() {
     // </section>
     <section className="">
       {/* <SimpleCounter/> */}
-      <DerivedState/>
+      {/* <DerivedState/> */}
+      <UserProfile/>
     </section>
   );
 }

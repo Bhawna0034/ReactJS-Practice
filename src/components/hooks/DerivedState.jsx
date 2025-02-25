@@ -37,3 +37,41 @@ export const DerivedState = () => {
     </div>
   );
 };
+
+export function UserProfile(){
+    const [user, setUser] = useState({
+        name: 'Bhawna Sharma',
+        age: 22,
+        email: 'bhawna@gmail.com',
+        address:{
+            city: 'Yamuna Nagar',
+            pincode: '135001'
+        }
+    });
+
+    const updateName = () => {
+        setUser({
+            ...user,
+            name: 'Hemant Sharma'
+        });
+    };
+
+    // const updatedCity = () => {
+    //     setUser({
+    //         ...user,
+    //         address: {
+    //             ...user.address,
+    //             city: 'Pune'
+    //         }
+    //     });
+    // }
+
+    return(
+        <div>
+            <h2>{user.name}</h2>
+            <p>Age: {user.age}</p>
+            <p>Email: {user.email}</p>
+            <button onClick={updateName} className="bg-teal-500 px-4 py-2 border-4 border-black rounded-lg">Change Name</button>
+        </div>
+    )
+}
