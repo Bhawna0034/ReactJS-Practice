@@ -11,6 +11,7 @@ import EventProps, { ParentComponent } from "./components/EventProps";
 import { EventPropagation } from "./components/EventPropagation";
 import SimpleCounter from "./components/hooks/SimpleCounter";
 import { DerivedState, UserProfile } from "./components/hooks/DerivedState";
+import ShoppingCart from "./components/hooks/ShoppingCart";
 
 // import './App.css'
 
@@ -25,7 +26,8 @@ function App() {
     <section className="">
       {/* <SimpleCounter/> */}
       {/* <DerivedState/> */}
-      <UserProfile/>
+      {/* <UserProfile/> */}
+      <ShoppingCart/>
     </section>
   );
 }
