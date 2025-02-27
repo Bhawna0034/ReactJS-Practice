@@ -1,17 +1,7 @@
 import { useState } from "react";
-import { MovieCards } from "./components/MovieCards";
-import InlineCSSComponent from "./components/InlineCSSComponent";
-import ConditionalStylingUsingTernaryOperator, {
-  ConditinalStylingUsingANDOperator,
-  ConditionalStylingUsingJSObject,
-} from "./components/ConditinalStyling";
-import MyButton, { Button } from './components/Button';
-import { EventHandling } from "./components/EventHandling";
-import EventProps, { ParentComponent } from "./components/EventProps";
-import { EventPropagation } from "./components/EventPropagation";
-import SimpleCounter from "./components/hooks/SimpleCounter";
-import { DerivedState, UserProfile } from "./components/hooks/DerivedState";
-import ShoppingCart from "./components/hooks/ShoppingCart";
+import ParentComponent from "./components/hooks/LiftingState";
+
+
 
 // import './App.css'
 
@@ -24,10 +14,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section className="">
-      {/* <SimpleCounter/> */}
-      {/* <DerivedState/> */}
-      {/* <UserProfile/> */}
-      <ShoppingCart/>
+      <ParentComponent />
     </section>
   );
 }
