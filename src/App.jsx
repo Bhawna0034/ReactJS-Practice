@@ -1,6 +1,5 @@
 import { useState } from "react";
-import ParentComponent from "./components/hooks/LiftingState";
-import { ToggleSwitch } from "./components/hooks/ToggleSwitch";
+import { Todo } from "./components/projects/Todo";
 
 
 
@@ -15,8 +14,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section className="">
-      {/* <ParentComponent /> */}
-      <ToggleSwitch/>
+      <Todo/>
     </section>
   );
 }
