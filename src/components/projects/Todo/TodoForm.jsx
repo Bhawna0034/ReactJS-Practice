@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 export const TodoForm = ({onAddTodo}) => {
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState({});
 
   //another state for storing task
   const [task, setTask] = useState([]);
@@ -10,13 +10,13 @@ export const TodoForm = ({onAddTodo}) => {
  
 
   function handleInputChange(value) {
-    setInputValue(value);
+    setInputValue({id:value, content:value, checked:false});
   }
 
   function handleFormSubmit(event){
     event.preventDefault();
     onAddTodo(inputValue);
-    setInputValue("");
+    setInputValue({id:"", content:"", checked:false});
   }
     return(
         <section id="form">
@@ -30,7 +30,7 @@ export const TodoForm = ({onAddTodo}) => {
                         id="todo-input"
                         className=" focus:outline-none text-black  text-md py-2"
                         autoComplete="off"
-                        value={inputValue}
+                        value={inputValue.content}
                         onChange={(event) => handleInputChange(event.target.value)}
                       />
                     </div>

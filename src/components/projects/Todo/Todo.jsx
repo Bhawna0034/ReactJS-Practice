@@ -15,22 +15,41 @@ export const Todo = () => {
   }
 
   function handleFormSubmit(inputValue) {
+    const {id, content, checked} = inputValue;
 
     // Check if the input field is empty or not
-    if (!inputValue) return;
-    if (task.includes(inputValue)) {
-      return;
-    }
+    if (!content) return;
 
-    setTask((prevTask) => [...prevTask, inputValue]);
+    // Check if the data is already existing or not
+    const ifTodoContentMatched = task.find((currentTask) =>
+    currentTask.content === content );
+
+    if(ifTodoContentMatched) return;
+    // if (task.includes(inputValue)) {
+    //   return;
+    // }
+
+    setTask((prevTask) => [...prevTask, {id, content, checked}]);
     // setInputValue("");
+  }
+
+  function handleCheckedTask(content){
+    const updatedTask = task.map((currentTask) => {
+       if(currentTask.content === content){
+         return {...currentTask, checked: !currentTask.checked}
+       }
+       else{
+        return currentTask;
+       }
+     });
+     setTask(updatedTask);
   }
   
 
   function handleDeleteTask(value){
     // console.log(task);
     console.log(value);
-    const updatedTask = task.filter((currentTask) => currentTask !== value);
+    const updatedTask = task.filter((currentTask) => currentTask.content !== value);
     setTask(updatedTask);
   }
 
@@ -51,12 +70,16 @@ export const Todo = () => {
         <TodoForm onAddTodo = {handleFormSubmit}/>
         <section id="myTasks">
           <ul className="space-y-3">
-            {task.map((currentTask, index) => {
+            {task.map((currentTask) => {
               return (
-                <TodoList key={index} 
-                          data={currentTask} 
-                          onHandleDeleteTask={handleDeleteTask}/>
-              );
+                <TodoList key={currentTask.id} 
+                          data={currentTask.content} 
+                          checked={currentTask.checked}
+                          onHandleDeleteTask={handleDeleteTask}
+                          onHandleCheckedTask={handleCheckedTask}
+                          />
+                         
+                  );
             })}
           </ul>
         </section>
