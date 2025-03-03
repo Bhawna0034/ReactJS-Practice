@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Todo } from "./components/projects/Todo";
+import { Todo } from "./components/projects/Todo/Todo";
 
 
 
