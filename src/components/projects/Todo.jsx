@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaCheckSquare, FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { RiAlignCenter, RiFacebookFill } from "react-icons/ri";
 
 export const Todo = () => {
   const [inputValue, setInputValue] = useState("");
@@ -37,9 +38,17 @@ export const Todo = () => {
 
     return () => clearInterval(interval)
   }, []);
-    
 
-  
+  function handleDeleteTask(value){
+    // console.log(task);
+    console.log(value);
+    const updatedTask = task.filter((currentTask) => currentTask !== value);
+    setTask(updatedTask);
+  }
+
+  function handleClearBtn(){
+    setTask([]);
+  }
 
   return (
     <div className="bg-[#081c29] flex items-center justify-center min-h-screen">
@@ -93,7 +102,7 @@ export const Todo = () => {
                     <button id="edit-btn">
                         <FaEdit className="text-2xl text-[#002E55]"/></button>
                     <button id="delete-btn">
-                      <MdDelete className="text-2xl text-red-600" />
+                      <MdDelete onClick={()=> handleDeleteTask(currentTask)} className="text-2xl text-red-600" />
                     </button>
                     
                   </div>
@@ -101,6 +110,9 @@ export const Todo = () => {
               );
             })}
           </ul>
+        </section>
+        <section id="clearAll-btn"> 
+          <button onClick={handleClearBtn} className="bg-red-600 text-white text-xl font-semibold px-4 py-2 rounded-md hover:scale-[1.05] focus:scale-[1.05]">Clear All</button>
         </section>
       </section>
     </div>
