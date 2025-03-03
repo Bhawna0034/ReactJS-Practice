@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCheckSquare, FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 
@@ -7,6 +7,7 @@ export const Todo = () => {
 
   //another state for storing task
   const [task, setTask] = useState([]);
+  const [dateTime, setDateTime] = useState("");
 
   function handleInputChange(value) {
     setInputValue(value);
@@ -24,6 +25,21 @@ export const Todo = () => {
     setTask((prevTask) => [...prevTask, inputValue]);
     setInputValue("");
   }
+  
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      const formattedDate = now.toLocaleDateString();
+      const formattedTime = now.toLocaleTimeString();
+      setDateTime(`${formattedDate} - ${formattedTime}`);
+    }, 1000);
+
+    return () => clearInterval(interval)
+  }, []);
+    
+
+  
 
   return (
     <div className="bg-[#081c29] flex items-center justify-center min-h-screen">
@@ -31,9 +47,10 @@ export const Todo = () => {
         id="todo-container"
         className=" flex flex-col items-center space-y-4"
       >
-        <header>
+        
           <h1 className="text-5xl text-white font-bold">Todo List</h1>
-        </header>
+          <h2 className="text-xl text-white font-bold">{dateTime}</h2>
+        
         <section id="form">
           <form
             onSubmit={handleFormSubmit}
