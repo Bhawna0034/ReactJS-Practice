@@ -7,6 +7,7 @@ export const TodoList = ({
   checked,
   onHandleDeleteTask,
   onHandleCheckedTask,
+  onHandleEditTask
 }) => {
   return (
     <li
@@ -24,7 +25,9 @@ export const TodoList = ({
           />
         </button>
         <button id="edit-btn">
-          <FaEdit className="text-2xl text-[#002E55]" />
+          <FaEdit 
+            onClick={() => onHandleEditTask(data)} 
+            className="text-2xl text-[#002E55]" />
         </button>
         <button id="delete-btn">
           <MdDelete
