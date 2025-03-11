@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Todo } from "./components/projects/Todo/Todo";
-
+import ShortCircuit from "./components/ShortCircuit";
 
 
 // import './App.css'
@@ -13,8 +13,8 @@ function App() {
     //   <h1 className="whitespace-nowrap text-3xl font-bold mb-8">List of Best Movies of 2024-2025</h1>
     //   <MovieCards />
     // </section>
-    <section className="">
-      <Todo/>
+    <section>
+      <ShortCircuit />
     </section>
   );
 }
