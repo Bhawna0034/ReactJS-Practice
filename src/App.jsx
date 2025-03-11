@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Todo } from "./components/projects/Todo/Todo";
 import ShortCircuit from "./components/ShortCircuit";
+import PracticeUseState from "./components/hooks/useState/practiceUseState";
+
 
 
 // import './App.css'
@@ -14,7 +16,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <ShortCircuit />
+      <PracticeUseState />
     </section>
   );
 }
