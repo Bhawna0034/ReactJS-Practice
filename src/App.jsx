@@ -6,6 +6,7 @@ import CounterChallenge from "./components/hooks/useState/CounterChallenge";
 import UnControlled from "./components/UncontrolledComponent";
 import UnControlledComponent from "./components/UncontrolledComponent";
 import ControlledComponent from "./components/ControlledComponent";
+import RegistrationForm from "./components/hooks/useState/RegistrationForm";
 
 
 
@@ -20,7 +21,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <ControlledComponent/>
+      <RegistrationForm/>
     </section>
   );
 }
