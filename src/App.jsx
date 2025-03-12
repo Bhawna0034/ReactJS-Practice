@@ -3,6 +3,9 @@ import { Todo } from "./components/projects/Todo/Todo";
 import ShortCircuit from "./components/ShortCircuit";
 import PracticeUseState from "./components/hooks/useState/practiceUseState";
 import CounterChallenge from "./components/hooks/useState/CounterChallenge";
+import UnControlled from "./components/UncontrolledComponent";
+import UnControlledComponent from "./components/UncontrolledComponent";
+import ControlledComponent from "./components/ControlledComponent";
 
 
 
@@ -17,7 +20,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <CounterChallenge />
+      <ControlledComponent/>
     </section>
   );
 }
