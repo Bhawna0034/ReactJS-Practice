@@ -8,6 +8,7 @@ import UnControlledComponent from "./components/UncontrolledComponent";
 import ControlledComponent from "./components/ControlledComponent";
 import RegistrationForm from "./components/hooks/useState/RegistrationForm";
 import LoginForm from "./components/hooks/useState/LoginForm";
+import ContactForm from "./components/hooks/useState/ContactForm";
 
 
 
@@ -22,7 +23,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <LoginForm/>
+      <ContactForm/>
     </section>
   );
 }
