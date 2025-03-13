@@ -7,6 +7,7 @@ import UnControlled from "./components/UncontrolledComponent";
 import UnControlledComponent from "./components/UncontrolledComponent";
 import ControlledComponent from "./components/ControlledComponent";
 import RegistrationForm from "./components/hooks/useState/RegistrationForm";
+import LoginForm from "./components/hooks/useState/LoginForm";
 
 
 
@@ -21,7 +22,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <RegistrationForm/>
+      <LoginForm/>
     </section>
   );
 }
