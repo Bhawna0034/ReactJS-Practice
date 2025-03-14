@@ -12,6 +12,7 @@ import ContactForm from "./components/hooks/useState/ContactForm";
 import Effect1 from "./components/hooks/useEffect/Effect1";
 import Effect2 from "./components/hooks/useEffect/Effect2";
 import Effect3 from "./components/hooks/useEffect/Effect3";
+import EffectChallenge from "./components/hooks/useEffect/EffectChallenge";
 
 
 
@@ -26,7 +27,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <Effect3 />
+      <EffectChallenge />
     </section>
   );
 }
