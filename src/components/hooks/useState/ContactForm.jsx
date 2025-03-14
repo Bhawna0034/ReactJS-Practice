@@ -1,23 +1,28 @@
 import React, { useState } from "react";
 
 const ContactForm = () => {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [message, setMessage] = useState("");
+    const [user, setUser] = useState({
+        username: "",
+        email: "",
+        message: ""
+    });
+
+    // const [username, setUsername] = useState("");
+    // const [password, setPassword] = useState("");
+    // const [message, setMessage] = useState("");
+
+    function handleInputChange(event){
+        const {name, value} = event.target;
+        setUser((prevValue) => ({ ...prevValue, [name]:value}))
+    }
 
     function handleFormSubmit(event){
         event.preventDefault();
-        const contactFormData = {
-            username,
-            password,
-            message
-        };
-        console.log(contactFormData);
-        setUsername("");
-        setPassword("");
-        setMessage("");
+        console.log(user);
+        setUser("");
 
     }
+
   return (
     <div className="flex items-center justify-center min-h-screen">
     <div
@@ -35,20 +40,20 @@ const ContactForm = () => {
             name="username"
             className="bg-gray-100 rounded-sm w-full p-2 focus:outline-none"
             autoComplete="off"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
+            value={user.username}
+            onChange={handleInputChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="email">Email</label>
           <input
-            type="password"
-            name="password"
+            type="email"
+            name="email"
             className="bg-gray-100 rounded-sm w-full p-2 focus:outline-none"
             autoComplete="off"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
+            value={user.password}
+            onChange={handleInputChange}
             required
           />
         </div>
@@ -58,8 +63,8 @@ const ContactForm = () => {
             name="message"
             className="bg-gray-100 rounded-sm w-full p-2 focus:outline-none"
             autoComplete="off"
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
+            value={user.message}
+            onChange={handleInputChange}
             required
           />
         </div>

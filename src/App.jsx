@@ -9,6 +9,7 @@ import ControlledComponent from "./components/ControlledComponent";
 import RegistrationForm from "./components/hooks/useState/RegistrationForm";
 import LoginForm from "./components/hooks/useState/LoginForm";
 import ContactForm from "./components/hooks/useState/ContactForm";
+import Effect1 from "./components/hooks/useEffect/Effect1";
 
 
 
@@ -23,7 +24,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <ContactForm/>
+      <Effect1 />
     </section>
   );
 }
