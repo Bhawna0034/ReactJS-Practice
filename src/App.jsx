@@ -11,6 +11,7 @@ import LoginForm from "./components/hooks/useState/LoginForm";
 import ContactForm from "./components/hooks/useState/ContactForm";
 import Effect1 from "./components/hooks/useEffect/Effect1";
 import Effect2 from "./components/hooks/useEffect/Effect2";
+import Effect3 from "./components/hooks/useEffect/Effect3";
 
 
 
@@ -25,7 +26,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <Effect2 />
+      <Effect3 />
     </section>
   );
 }
