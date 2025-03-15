@@ -13,6 +13,7 @@ import Effect1 from "./components/hooks/useEffect/Effect1";
 import Effect2 from "./components/hooks/useEffect/Effect2";
 import Effect3 from "./components/hooks/useEffect/Effect3";
 import EffectChallenge from "./components/hooks/useEffect/EffectChallenge";
+import FetchData from "./components/hooks/useEffect/FetchData";
 
 
 
@@ -27,7 +28,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <EffectChallenge />
+      <FetchData />
     </section>
   );
 }
