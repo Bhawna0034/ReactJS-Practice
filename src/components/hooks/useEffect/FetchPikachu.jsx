@@ -21,8 +21,24 @@ const FetchPikachu = () => {
         console.error("Fetching error: ", error)});
   }, []);
 
+  async function FetchData(){
+     try{
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        setLoading(false);
+        setApiData(data);
+        
+     }
+     catch{
+         setLoading(false);
+         setError(error.message);
+         console.error("Fetching error: ", error);
+     }
+
+  };
+
   if(loading) return <h2 className="text-5xl font-bold">Loading...</h2>
-  if(error) return <h2 className="text-xs text-red-600">{error.message}</h2>
+  if(error) return <h2 className="text-xs text-red-600">{error}</h2>
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <h2 className="text-4xl font-bold">Pokemon Card</h2>
