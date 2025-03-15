@@ -1,19 +1,6 @@
 import { useState } from "react";
-import { Todo } from "./components/projects/Todo/Todo";
-import ShortCircuit from "./components/ShortCircuit";
-import PracticeUseState from "./components/hooks/useState/practiceUseState";
-import CounterChallenge from "./components/hooks/useState/CounterChallenge";
-import UnControlled from "./components/UncontrolledComponent";
-import UnControlledComponent from "./components/UncontrolledComponent";
-import ControlledComponent from "./components/ControlledComponent";
-import RegistrationForm from "./components/hooks/useState/RegistrationForm";
-import LoginForm from "./components/hooks/useState/LoginForm";
-import ContactForm from "./components/hooks/useState/ContactForm";
-import Effect1 from "./components/hooks/useEffect/Effect1";
-import Effect2 from "./components/hooks/useEffect/Effect2";
-import Effect3 from "./components/hooks/useEffect/Effect3";
-import EffectChallenge from "./components/hooks/useEffect/EffectChallenge";
-import FetchData from "./components/hooks/useEffect/FetchData";
+import FetchPikachu from "./components/hooks/useEffect/fetchPikachu";
+
 
 
 
@@ -28,7 +15,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <FetchData />
+      <FetchPikachu />
     </section>
   );
 }
