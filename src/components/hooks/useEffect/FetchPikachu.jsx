@@ -40,7 +40,7 @@ const FetchPikachu = () => {
   if(loading) return <h2 className="text-5xl font-bold">Loading...</h2>
   if(error) return <h2 className="text-xs text-red-600">{error}</h2>
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div>
       <h2 className="text-4xl font-bold">Pokemon Card</h2>
       <div
         className="bg-white p-6 rounded-md"
@@ -49,7 +49,7 @@ const FetchPikachu = () => {
         <ul>
           <li>
             <figure>
-                <img src = {"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"}
+                <img src = {"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"}
                      alt="pikachu"
                      className="w-[100px] object-contain"
                      />

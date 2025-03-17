@@ -1,5 +1,7 @@
 import { useState } from "react";
 import FetchPikachu from "./components/hooks/useEffect/fetchPikachu";
+import PokemonWebsite from "./components/projects/Pokemon/PokemonWebsite";
+
 
 
 
@@ -15,7 +17,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <FetchPikachu />
+      <PokemonWebsite />
     </section>
   );
 }
