@@ -5,6 +5,7 @@ import Ref1 from "./components/hooks/useRef/Ref1";
 import Ref2 from "./components/hooks/useRef/Ref2";
 import Stopwatch from "./components/hooks/useRef/Stopwatch";
 import ForwardRef from "./components/hooks/useRef/ForwardRef";
+import Id from "./components/hooks/useId/Id";
 
 
 
@@ -21,7 +22,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <ForwardRef />
+      <Id/>
     </section>
   );
 }
