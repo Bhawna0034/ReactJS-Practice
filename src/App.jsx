@@ -6,6 +6,7 @@ import Ref2 from "./components/hooks/useRef/Ref2";
 import Stopwatch from "./components/hooks/useRef/Stopwatch";
 import ForwardRef from "./components/hooks/useRef/ForwardRef";
 import Id from "./components/hooks/useId/Id";
+import PropDrilling from "./components/hooks/PropDrilling";
 
 
 
@@ -22,7 +23,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <Id/>
+      <PropDrilling/>
     </section>
   );
 }
