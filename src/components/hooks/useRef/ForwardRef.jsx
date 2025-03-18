@@ -12,8 +12,10 @@ const ForwardRef = () => {
   return (
     <div className="bg-gray-100 flex flex-col gap-4 items-center min-h-screen">
       <form onSubmit={handleFormSubmit}>
-        <BeforeReact19Input label="Username" ref={username} />
-        <BeforeReact19Input label="Password" ref={password} />
+        {/* <BeforeReact19Input label="Username" ref={username} />
+        <BeforeReact19Input label="Password" ref={password} /> */}
+        <AfterReact19Input label = "Username" ref={username} />
+        <AfterReact19Input label = "Password" ref={password} />
         <button
           type="submit"
           className="bg-teal-600 border-2 border-black px-4 py-2"
@@ -24,6 +26,19 @@ const ForwardRef = () => {
     </div>
   );
 };
+
+export const AfterReact19Input = (props) => {
+    const id = useId();
+    return(
+        <div>
+            <label htmlFor={id}>{props.label}</label>
+            <input type="text" ref={props.ref} />
+        </div>
+        
+
+    )
+
+}
 
 export const BeforeReact19Input = forwardRef((props, ref) => {
     const id = useId();
