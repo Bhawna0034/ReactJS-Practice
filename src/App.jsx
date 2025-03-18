@@ -3,6 +3,7 @@ import FetchPikachu from "./components/hooks/useEffect/fetchPikachu";
 import PokemonWebsite from "./components/projects/Pokemon/PokemonWebsite";
 import Ref1 from "./components/hooks/useRef/Ref1";
 import Ref2 from "./components/hooks/useRef/Ref2";
+import Stopwatch from "./components/hooks/useRef/Stopwatch";
 
 
 
@@ -19,7 +20,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <Ref2 />
+      <Stopwatch />
     </section>
   );
 }
