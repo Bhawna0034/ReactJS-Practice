@@ -8,6 +8,7 @@ import ForwardRef from "./components/hooks/useRef/ForwardRef";
 import Id from "./components/hooks/useId/Id";
 import PropDrilling from "./components/hooks/PropDrilling";
 import Context from "./components/hooks/useContext/Context";
+import ThemeSwitcher from "./components/hooks/useContext/ThemeSwitcher";
 
 
 
@@ -24,7 +25,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <section>
-      <Context/>
+      <ThemeSwitcher/>
     </section>
   );
 }
