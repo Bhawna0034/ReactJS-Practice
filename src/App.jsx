@@ -1,15 +1,5 @@
 import { useState } from "react";
-import FetchPikachu from "./components/hooks/useEffect/fetchPikachu";
-import PokemonWebsite from "./components/projects/Pokemon/PokemonWebsite";
-import Ref1 from "./components/hooks/useRef/Ref1";
-import Ref2 from "./components/hooks/useRef/Ref2";
-import Stopwatch from "./components/hooks/useRef/Stopwatch";
-import ForwardRef from "./components/hooks/useRef/ForwardRef";
-import Id from "./components/hooks/useId/Id";
-import PropDrilling from "./components/hooks/PropDrilling";
-import Context from "./components/hooks/useContext/Context";
-import ThemeSwitcher from "./components/hooks/useContext/ThemeSwitcher";
-import CounterComponent from "./components/hooks/Custom Hooks/CounterComponent";
+import UseExample from "./components/hooks/use/UseExample";
 
 
 
@@ -25,9 +15,9 @@ function App() {
     //   <h1 className="whitespace-nowrap text-3xl font-bold mb-8">List of Best Movies of 2024-2025</h1>
     //   <MovieCards />
     // </section>
-    <section>
-      <CounterComponent/>
-    </section>
+    <>
+      <UseExample/>
+    </>
   );
 }
 
