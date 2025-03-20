@@ -9,7 +9,7 @@ const ThemeSwitcher = () => {
     <div className='h-lvh flex flex-col items-center justify-center mt-6 '>
         <h2 className='text-5xl font-bold '>Theme Switcher </h2>
         <ThemeContext.Provider value={{theme, setTheme}}>
-            <Theme/>
+            <Theme />
         </ThemeContext.Provider>
       
     </div>
