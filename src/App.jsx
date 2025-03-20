@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UseExample from "./components/hooks/use/UseExample";
+import Mode from "./components/projects/Light-Dark Mode/Mode";
 
 
 
@@ -16,7 +17,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <>
-      <UseExample/>
+      <Mode/>
     </>
   );
 }
