@@ -4,6 +4,7 @@ import Mode from "./components/projects/Light-Dark Mode/Mode";
 import Reducer from "./components/hooks/useReducer/Reducer";
 import Stopwatch from "./components/hooks/useRef/Stopwatch";
 import ReactMemo from "./components/hooks/Memo/ReactMemo";
+import UseMemo from "./components/hooks/Memo/UseMemo";
 
 
 
@@ -20,7 +21,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <>
-      <ReactMemo/>
+      <UseMemo/>
     </>
   );
 }
