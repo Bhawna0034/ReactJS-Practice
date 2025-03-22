@@ -5,6 +5,7 @@ import Reducer from "./components/hooks/useReducer/Reducer";
 import Stopwatch from "./components/hooks/useRef/Stopwatch";
 import ReactMemo from "./components/hooks/Memo/ReactMemo";
 import UseMemo from "./components/hooks/Memo/UseMemo";
+import Callback1 from "./components/hooks/useCallback/Callback1";
 
 
 
@@ -21,7 +22,7 @@ function App() {
     //   <MovieCards />
     // </section>
     <>
-      <UseMemo/>
+      <Callback1/>
     </>
   );
 }
