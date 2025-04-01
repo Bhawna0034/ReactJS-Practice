@@ -11,17 +11,29 @@ const Footer = () => {
         <ul className="text-gray-400 font-semibold space-y-1">
           <h2 className="text-gray-500 font-bold text-xl">About Company</h2>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" className="hover:text-blue-800 hover:underline">
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink
+              to="/about"
+              className="hover:text-blue-800 hover:underline"
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink
+              to="/contact"
+              className="hover:text-blue-800 hover:underline"
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </div>
-      <p className="text-xs text-white">Copyright &copy; 2025</p>
+      <p className="text-xs text-gray-100">Copyright &copy; 2025 reserved.</p>
     </div>
   );
 };

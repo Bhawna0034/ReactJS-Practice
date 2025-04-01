@@ -25,6 +25,16 @@ const Navbar = () => {
         About
       </NavLink>
       <NavLink
+        to="/movie"
+        className={({ isActive }) =>
+          isActive
+            ? "text-blue-700 font-bold underline"
+            : "text-gray-800 hover:text-blue-500"
+        }
+      >
+        Movie
+      </NavLink>
+      <NavLink
         to="/contact"
         className={({ isActive }) =>
           isActive
