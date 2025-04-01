@@ -14,7 +14,7 @@ const Header = () => {
             <li>About</li>
             <li>Contact</li>
           </ul> */}
-          <Navbar />
+          <Navbar  />
         </div>
       </header>
     </div>
