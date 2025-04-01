@@ -16,11 +16,13 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         to="/about"
-        className={({ isActive }) =>
-          isActive
-            ? "text-blue-700 font-bold underline"
-            : "text-gray-800 hover:text-blue-500"
-        }
+       style={({isActive}) => ({
+        color: isActive? "red": "black",
+        fontWeight: isActive? "bold": "normal",
+        textDecoration: isActive? "underline": "none"
+
+       })
+      }
       >
         About
       </NavLink>
