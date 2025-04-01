@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 const AppLayout = () => {
   return (
-    <div className='p-4'>
+    <div className='p-8'>
         <Header />
         <Outlet />
         <Footer />
