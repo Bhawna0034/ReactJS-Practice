@@ -8,6 +8,8 @@ import Contact from "./components/React Router/Contact"
 import ErrorPage from "./components/React Router/ErrorPage";
 import getMovieData from "./api/GetAPIData";
 import Movie from "./components/React Router/Movie";
+import MovieDetails from "./components/React Router/UI/MovieDetails";
+import getMovieDetails from "./api/getMovieDetails";
 
 
 
@@ -31,6 +33,13 @@ const router = createBrowserRouter([
         element: <Movie />,
         loader: getMovieData
       },
+      {
+        path: "/movie/:movieID",
+        element: <MovieDetails />,
+        loader: getMovieDetails,
+
+      },
+
       {
         path: "/contact",
         element: <Contact />
