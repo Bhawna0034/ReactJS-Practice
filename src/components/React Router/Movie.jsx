@@ -6,7 +6,7 @@ const Movie = () => {
   const movieData = useLoaderData();
   console.log(movieData);
   return (
-    <ul className='grid grid-cols-3 gap-4 p-4  '>
+    <ul className='flex flex-wrap items-center justify-center gap-8 p-8  '>
       {
         movieData && movieData.Search.map((currentMovie) => {
           return <Card key={currentMovie.imdbID} currentMovie={currentMovie} />
