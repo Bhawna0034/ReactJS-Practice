@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./components/React Router/layout/AppLayout";
 import Home from "./components/React Router/Home";
 import About from "./components/React Router/About";
-import Contact from "./components/React Router/Contact"
+import Contact, { contactData } from "./components/React Router/Contact"
 import ErrorPage from "./components/React Router/ErrorPage";
 import getMovieData from "./api/GetAPIData";
 import Movie from "./components/React Router/Movie";
@@ -42,7 +42,8 @@ const router = createBrowserRouter([
 
       {
         path: "/contact",
-        element: <Contact />
+        element: <Contact />,
+        action: contactData
       }
     ]
 
