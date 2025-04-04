@@ -6,7 +6,13 @@ const MovieDetails = () => {
   const movieDetails = useLoaderData();
   console.log(movieDetails);
 
-  const { Poster, imdbID, Title, Year, Plot, Actors, Genre } = movieDetails;
+  const { Poster, imdbID, Title, Year, Plot, Actors, Genre, Runtime } = movieDetails;
+   const totalMinutes = Runtime.replace("min", "");
+   const hours = Math.floor(totalMinutes / 60); // Convert min into hrs
+   const minutes =  (totalMinutes % 60); // Remaining minutes
+  //  console.log(hours, minutes);
+   const formattedTime = `${hours}hr ${minutes}min`;
+  //  console.log(formattedTime);
   return (
     <>
       <li className="object-contain list-none p-10 flex items-center justify-center">
@@ -18,7 +24,7 @@ const MovieDetails = () => {
             <h2 className="text-2xl font-bold text-white mb-1 ">
               {Title} ({Year})
             </h2>
-            <p className="text-sm text-gray-500 italic mb-1">{Genre} </p>
+            <p className="text-sm text-gray-500 italic mb-1">{Genre}&nbsp;  {formattedTime} </p>
             <p className="text-gray-400 mb-1">{Plot}</p>
             <p className="text-md text-gray-100 ">Cast: {Actors}</p>
             <NavLink to={`/movie`}>

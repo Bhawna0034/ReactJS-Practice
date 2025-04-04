@@ -15,11 +15,8 @@ const getMovieDetails = async({params}) => {
     }catch(error){
         console.log(error);
     }
-  return (
-    <div>
-      
-    </div>
-  )
+  return 
+   
 }
 
 export default getMovieDetails;
