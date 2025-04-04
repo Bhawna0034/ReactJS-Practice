@@ -1,15 +1,16 @@
 // import './App.css'
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppLayout from "./components/React Router/layout/AppLayout";
-import Home from "./components/React Router/pages/Home";
-import About from "./components/React Router/pages/About";
-import Contact, { contactData } from "./components/React Router/pages/Contact"
-import ErrorPage from "./components/React Router/pages/ErrorPage";
-import getMovieData from "./api/GetAPIData";
-import Movie from "./components/React Router/pages/Movie";
-import MovieDetails from "./components/React Router/UI/MovieDetails";
-import getMovieDetails from "./api/getMovieDetails";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import AppLayout from "./components/React Router/layout/AppLayout";
+// import Home from "./components/React Router/pages/Home";
+// import About from "./components/React Router/pages/About";
+// import Contact, { contactData } from "./components/React Router/pages/Contact"
+// import ErrorPage from "./components/React Router/pages/ErrorPage";
+// import getMovieData from "./api/GetAPIData";
+// import Movie from "./components/React Router/pages/Movie";
+// import MovieDetails from "./components/React Router/UI/MovieDetails";
+// import getMovieDetails from "./api/getMovieDetails";
+import MovieAxios from "./components/Axios/MovieAxios";
 
 
 
@@ -53,7 +54,10 @@ const router = createBrowserRouter([
 
 
 function App() {
-  return <RouterProvider router = {router} />
+  // return <RouterProvider router = {router} />
+  return(
+    <MovieAxios />
+  )
 }
 
 export default App;
