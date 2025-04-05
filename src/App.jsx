@@ -1,7 +1,6 @@
 // import './App.css'
 
-import { useEffect } from "react";
-import { getPost } from "./api/PostAPI";
+import Posts from "./components/Axios/Posts";
 
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import AppLayout from "./components/React Router/layout/AppLayout";
@@ -57,25 +56,12 @@ import { getPost } from "./api/PostAPI";
 
 
 function App() {
-  console.log(getPost());
-  const getPostData = async() => {
-    try{
-      const response =  await getPost();
-      console.log(response);
-    }catch(error){
-      console.log(error);
-    }
- }
-
- useEffect(() => {
-  getPostData();
-
- }, []);
+  
   // return <RouterProvider router = {router} />
   return(
     <>
     {/* <MovieAxios /> */}
-    <h2>Hello Axios</h2>
+    <Posts />
     </>
     
   

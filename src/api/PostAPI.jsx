@@ -4,6 +4,12 @@ const api = axios.create({
     baseURL: "https://jsonplaceholder.typicode.com"
 });
 
+// get method
 export const getPost = () => {
     return api.get("/posts");
+}
+
+// delete method
+export const DeletePost = (id) => {
+    return api.delete(`/posts/${id}`);
 }
