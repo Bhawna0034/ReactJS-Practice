@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { DeletePost, getPost } from "../../api/PostAPI";
+import { deletePost, getPost } from "../../api/PostAPI";
+import FormAxios from "./FormAxios";
 
 const Posts = () => {
   const [data, setData] = useState([]);
@@ -20,7 +21,7 @@ const Posts = () => {
 
   const handleDeletePosts = async(id) => {
     try{
-        const response = await DeletePost(id);
+        const response = await deletePost(id);
         // console.log(response.data);
         if(response.status === 200){
         const updatedPosts = data.filter((currentPost) => currentPost.id !== id);
@@ -36,11 +37,14 @@ const Posts = () => {
 
   return (
     <>
-     <section className="bg-blue-950">
-        <ol className="grid grid-cols-2 lg:grid-cols-3 gap-4 p-8">
+     <section className="bg-blue-950 p-8">
+        <div>
+          <FormAxios  data={data} setData={setData} />
+        </div>
+        <ol className="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
             {
                 data.map((currentData) => {
-                    return <li key={currentData.id} className="bg-gray-700 border-l-white p-4 flex flex-col gap-4 justify-center">
+                    return <li key={currentData.id} className="bg-gray-700 border-l-4 border-l-white p-4 flex flex-col gap-4 justify-center">
                         <h2 className="text-xl text-white font-bold">Title: {currentData.title}</h2>
                         <p className="text-md text-white">Body: {currentData.body}</p>
                         <div className="flex gap-2 items-center">
