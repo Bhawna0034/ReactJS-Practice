@@ -19,3 +19,8 @@ export const postPost = (post) => {
     return api.post("/posts", post);
 
 } 
+
+// put method
+export const updatePost = (id, post) => {
+    return api.put(`/posts/${id}`, post);
+}

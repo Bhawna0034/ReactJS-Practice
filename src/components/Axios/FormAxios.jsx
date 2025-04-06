@@ -1,11 +1,21 @@
-import React, { useState } from "react";
-import { postPost } from "../../api/PostAPI";
+import React, { useEffect, useState } from "react";
+import { postPost, updatePost } from "../../api/PostAPI";
 
-const FormAxios = ({ data, setData }) => {
+const FormAxios = ({ data, setData, updateDataAPI, setUpdateDataAPI }) => {
   const [addData, setAddData] = useState({
     title: "",
     body: "",
   });
+
+  const isEmpty = Object.keys(updateDataAPI).length === 0;
+
+  useEffect(() => {
+    updateDataAPI &&
+      setAddData({
+        title: updateDataAPI.title || "",
+        body: updateDataAPI.body || "",
+      });
+  }, [updateDataAPI]);
 
   const handleInputChange = (event) => {
     const name = event.target.name;
@@ -19,32 +29,56 @@ const FormAxios = ({ data, setData }) => {
     });
   };
 
-  const addPostData = async() => {
-    try{
-        const response = await postPost(addData);
-        if(response.status === 201){
-            setData([... data, response.data]);
-            setAddData({title: "", body: ""});
-            
-        }
-    
-        }catch(error){
-            console.error(error.message);
-        }
-        
-  }
+  //  updatePostData
+  const updatePostData = async () => {
+    try {
+      const response = await updatePost(updateDataAPI.id, addData);
+      console.log(response);
+      if (response.status === 200) {
+        setData((prev) => {
+          return prev.map((currentData) => {
+            return currentData.id === response.data.id
+              ? response.data
+              : currentData;
+          });
+        });
+        setAddData({title: "", body: ""});
+        setUpdateDataAPI({});
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  //  addPostData
+  const addPostData = async () => {
+    try {
+      const response = await postPost(addData);
+      if (response.status === 201) {
+        setData([...data, response.data]);
+        setAddData({ title: "", body: "" });
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
   const handleFormSubmit = (event) => {
+    const action = event.nativeEvent.submitter.value;
     event.preventDefault();
-    addPostData(data);
-    
-
-  }
+    if (action === "ADD") {
+      addPostData(data);
+    } else if (action === "EDIT") {
+      updatePostData();
+    }
+  };
 
   return (
     <>
       <section className=" flex justify-center">
-        <form onSubmit={handleFormSubmit} className="bg-gray-800 flex gap-4 items-center p-4">
+        <form
+          onSubmit={handleFormSubmit}
+          className="bg-gray-800 flex gap-4 items-center p-4"
+        >
           <div>
             <label htmlFor="title"></label>
             <input
@@ -73,9 +107,10 @@ const FormAxios = ({ data, setData }) => {
           </div>
           <button
             type="submit"
+            value={isEmpty ? "ADD" : "EDIT"}
             className="bg-teal-700 text-black font-bold px-4 py-2 focus:scale-[1.03] hover:opacity-80"
           >
-            ADD
+            {isEmpty ? "ADD" : "EDIT"}
           </button>
         </form>
       </section>

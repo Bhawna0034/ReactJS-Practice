@@ -4,6 +4,7 @@ import FormAxios from "./FormAxios";
 
 const Posts = () => {
   const [data, setData] = useState([]);
+  const [updateDataAPI, setUpdateDataAPI] = useState({});
   console.log(getPost());
   const getPostData = async () => {
     try {
@@ -31,15 +32,18 @@ const Posts = () => {
     }catch(error){
         console.log(error);
     }
-    
+}
 
-  }
+const handleUpdatePost = (currentData) => setUpdateDataAPI(currentData);
+  
+
+
 
   return (
     <>
      <section className="bg-blue-950 p-8">
         <div>
-          <FormAxios  data={data} setData={setData} />
+          <FormAxios  data={data} setData={setData} updateDataAPI={updateDataAPI} setUpdateDataAPI={setUpdateDataAPI}/>
         </div>
         <ol className="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
             {
@@ -48,7 +52,7 @@ const Posts = () => {
                         <h2 className="text-xl text-white font-bold">Title: {currentData.title}</h2>
                         <p className="text-md text-white">Body: {currentData.body}</p>
                         <div className="flex gap-2 items-center">
-                            <button className="bg-teal-700 px-4 py-2 hover:bg-black hover:text-white">EDIT</button>
+                            <button onClick={() => handleUpdatePost(currentData)} className="bg-teal-700 px-4 py-2 hover:bg-black hover:text-white">EDIT</button>
                             <button onClick={() => handleDeletePosts(currentData.id)} className="bg-red-500 px-4 py-2 hover:bg-black hover:text-white">DELETE</button>
                         </div>
                     </li>
